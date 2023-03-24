@@ -5,7 +5,7 @@
 /* 임시 */
 .about { 
   /* height: 50vh; */
-  padding: 50px;
+  padding: 20px;
 }
 
 /* 서브타이틀 */
@@ -16,11 +16,15 @@
   line-height: 130%; /* 모바일 여러줄 용 */
 }
 
+.about_contents {
+  padding-top: 20px;
+}
 /* 본문 내용들 */
 .about_contents p {
   font-size: var(--font-size-larger);
   line-height: 130%;
   text-align: left;
+  margin-bottom: 5px;
   /* font-size: 30px; */
 }
 

@@ -19,10 +19,11 @@
 
 /* 타이핑 텍스트 */
 .intro__type {
+  letter-spacing: 5px;
   display: flex;
   flex-direction: column;
   gap: 0.32em;
-  font-family: var(--font-code);
+  font-family:'HakgyoansimWoojuR';
   font-size: 2em;
   font-weight: bold;
   color: white;
@@ -138,7 +139,6 @@
   .intro__type {
     margin-top: 36vh;
     align-items: center;
-    /* text-align: left; */
   }
 
   /* 진한 물결 */
@@ -176,6 +176,8 @@
   .intro__type {
     margin-top: 172px;
     align-items: center;
+    font-size: 50px;
+    letter-spacing: 10px;
   }
   .intro__type span {
     /* 이모지와 텍스트 줄 맞춤 */

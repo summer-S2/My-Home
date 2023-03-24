@@ -1,0 +1,135 @@
+#contact {
+  padding: 100px 0;
+  background-color: var(--color-light-bg);
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  margin-top: 3em;
+}
+
+/* 탭 & 탭버튼 */
+.contact__tab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: var(--font-size-larger);
+}
+
+/* 슬라이드 */
+.contact__slides {
+  margin: 1.6em 0;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.contact__slide-con {
+  display: flex;
+  width: 200vw;
+  transition: margin-left 500ms;
+}
+.contact__slide {
+  width: 100vw;
+}
+#ct_1:checked ~ .contact__slides .contact__slide-con {
+  margin-left: 0;
+}
+#ct_2:checked ~ .contact__slides .contact__slide-con {
+  margin-left: -100vw;
+}
+
+/* 라디오 버튼 커스터마이즈 */
+input[type=radio] {
+  all: unset;
+  display: inline-block;
+  padding: 0.8em 4em;
+  background-color: white;
+  cursor: pointer;
+}
+input[type=radio]:checked {
+  color: white;
+  background-color: var(--color-main);
+}
+#ct_1 { 
+  border-radius: 12px 0 0 12px; 
+  width: 15%;
+}
+#ct_1::after { content: '연락처 보기'; }
+#ct_2 { 
+  border-radius: 0 12px 12px 0; 
+  width: 15%;
+}
+#ct_2::after { content: '기록 보기'; }
+
+/* 연락처 보기 */
+.contact__contacts {
+  margin: 0 auto;
+  text-align: left;
+  color: var(--color-text);
+}
+.contact__contacts th {
+  padding-right: 3em;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: right;
+  color: var(--color-dark);
+  border-right: 4px solid var(--color-light-bd);
+}
+.contact__contacts a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #EEE;
+}
+.contact__contacts img {
+  margin-right: 0.1em;
+  width: 32px;
+  vertical-align: middle;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  input[type=radio] {
+    padding: 0.8em 2em;
+  }
+  #ct_1::after { content: '연락처'; }
+  #ct_2::after { content: '기록'; }
+
+  /* 연락처 보기 */
+  .contact__contacts th {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .contact__contacts tr > * {
+    padding: 0.6em;
+  }
+  .contact__contacts td::before {
+    content: '▶';
+    margin-right: 0.6em;
+    font-size: 0.67em;
+    opacity: 0.5;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 769px) {
+  #contact {
+    height: 90vh;
+  }
+  /* 연락처 보기 */
+  .contact__contacts {
+    border-spacing: 3em 1em;
+  }
+  #ct_1, #ct_2 {
+    width: 10%;
+  }
+
+}

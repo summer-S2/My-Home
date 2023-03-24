@@ -1,0 +1,162 @@
+/* 아티클 레이아웃 */
+#skills {
+  background-color: var(--color-light-bg);
+}
+.article__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* PC모드 가운데정렬 */
+}
+
+/* 아티클 설명 */
+.skills__title {
+  font-size: var(--font-size-subtitle);
+  /* font-weight: bold; */
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+.skills__desc {
+  padding-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 150%;
+  font-size: var(--font-size-text);
+  color: var(--color-text);
+}
+.skills__desc strong {
+  font-weight: bold;
+}
+
+/* 로고 아래 그림자 */
+.skills__thumb::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 10%;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.skills__thumb {
+  position: relative;
+}
+
+/* 아티클 설명 */
+.skills__content {
+  text-align: center;
+}
+
+/* 둥둥 오르내리는 효과 */
+@keyframes logo-hover {
+  from { transform: translateY(0); }
+  to { transform: translateY(10px); }
+}
+
+.skills__logo {
+  animation-name: logo-hover;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* 짙고 옅어지는 애니메이션 */
+@keyframes logo-shadow {
+  from { opacity: 0.08; }
+  to { opacity: 0.24; }
+}
+
+.skills__thumb::after {
+  animation-name: logo-shadow;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+/* ---------- 모바일 ---------- */
+@media (max-width: 768px) {
+  /* 섹션 설정
+  #html, #css, #javascript { 
+    border-bottom: 4px solid #9AC3BC; 
+  } */
+
+  /* 섹션 타이틀 */
+  .section__title {
+    margin-bottom: 30px;
+  }
+
+  /* 아티클 레이아웃 */
+  .skills {    
+    width: 50%;
+    padding: 5px;
+    /* max-height: 60vh; */
+  }
+
+  /* 로고 사이즈 */
+  .skills__logo {
+    width: 50%;
+  }
+
+  /* 로고 아래 그림자 */
+  .skills__thumb::after {
+    left: 25%;
+    bottom: -16%;
+    width: 50%;
+  }
+
+}
+
+
+/* 데스크탑 */
+@media (min-width: 769px) {
+  /* 섹션 설정 */
+  /* #html, #css, #javascript {
+    border-right: 4px solid #9AC3BC;
+  } */
+  .article__container {
+    margin-top: 50px;
+  }
+  .skills {
+    width: 33%;
+    padding: 30px;
+  }
+
+  /* 로고 사이즈 */
+  .skills__thumb {
+    height: 210px;
+    position: relative;
+  }
+  .skills__logo {
+    position: absolute;
+    width: 144px;
+    /* height: 100%;
+    text-align: center; */
+    /* 수직 중앙 정렬 */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+
+  /* 로고 아래 그림자 */
+  .skills__thumb::after {
+    left: calc(50% - 72px);
+    bottom: -24px;
+    width: 144px;
+  }
+
+  /* 그림자랑 설명 사이 마진 줄이기 */
+  .skills__desc {
+    padding-top: 40px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills {
+    width: 25%;
+    padding: 30px;
+  }
+}

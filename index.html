@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JYJ Home</title>
+
+  <link rel="stylesheet" href="./style.css" >
+</head>
+
+<body>
+
+  <!-- 스크롤 top 버튼 -->
+  <button id="movetopbt" class="display-hidden" onclick="topFunction()">
+    <span class="sr-only">맨 위로 이동하기</span>
+    <svg fill="white" width="25" height="25" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+      <path d="M18,20c-.384,0-.768-.146-1.061-.439l-4.938-4.939-4.94,4.939c-.586,.586-1.535,.586-2.121,0s-.586-1.536,0-2.121l6.001-6c.281-.281,.663-.439,1.061-.439h0c.397,0,.779,.158,1.061,.439l5.999,6c.586,.586,.586,1.536,0,2.121-.293,.293-.677,.439-1.061,.439Zm1.067-7.708c.582-.589,.576-1.539-.014-2.121l-3.922-3.873c-.837-.837-1.948-1.298-3.132-1.298s-2.295,.461-3.124,1.291l-3.93,3.88c-.59,.582-.596,1.532-.014,2.121,.581,.59,1.533,.595,2.121,.014l3.938-3.887c.537-.539,1.473-.546,2.025,.007l3.93,3.88c.292,.289,.673,.433,1.054,.433,.387,0,.774-.149,1.067-.446Z"/>
+    </svg>
+  </button>
+
+  <!-- *** INTRO *** -->
+  <section class="intro">
+    <div class="intro__dark">
+      <div class="intro__type">
+        <div class="intro__text">
+          <div id="t1">정윤지의 포트폴리오입니다.<span class="intro_br"><br></span></div>
+        </div>
+        <div class="intro__text">
+          <div id="t2">방문해주셔서 감사합니다<span class="underscore">_</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 물결 SVG  -->
+    <div class="custom-shape-divider-bottom-1679480862">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="custom-shape-divider-bottom-1679481304">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="custom-shape-divider-bottom-1679480862R">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- *** HEADER *** -->
+  <header class="header">
+
+    <!-- 홈 버튼  -->
+    <h1>
+      <span class="sr-only">홈으로 이동 버튼</span>
+      <a class="header__homelink" href="#">
+        <div class="header__homesvg">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="35" height="35" fill="white"><path d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"/></svg>
+        </div>
+      </a>
+    </h1>
+
+    <!-- 모바일용 메뉴 버튼 -->
+    <button class="header__menu-btn">
+      <!-- <?xml version="1.0" encoding="utf-8"?> -->
+      <svg id="menu_svg" fill="#FFFFFF" width="60px" height="60px" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+        <path d="M6,36v-3h36v3H6z M6,25.5v-3h36v3H6z M6,15v-3h36v3H6z"/>
+      </svg>
+    </button>
+
+    <!-- 헤더 내비 -->
+    <nav class="header__nav hidden">
+      <ul>
+        <li class="header__nav-item">
+          <a href="#about">ABOUT ME</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#skills">SKILLS</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#project">PROJECT</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- *** MAIN ***  -->
+  <main>
+    <!-- ABOUT SECTION  -->
+    <section id="about" class="section">
+      <div class="scroll_container">
+        <header class="section__header">
+          <h1 class="section__title">
+            ABOUT ME
+          </h1>
+        </header>
+  
+        <div class="about">
+          <div class="about_container">
+            <h2 class="about_header">성장하고 소통하는 <span class="about_br"><br></span> (미래의)개발자</h2>
+            <div class="about_contents">
+              <p>안녕하세요! 프론트엔드 개발자를 꿈꾸는 정윤지입니다.</p>
+              <br>
+              <p>다양한 경험 그리고 새로운 시도를 좋아합니다.</p>
+              <p>평소에 웹사이트를 이용하면서 '이런 기능이 있으면 좋을텐데..'하고 생각만 했던 기술을 스스로 고민하고 구현해보면서 큰 성취감을 느꼈습니다.</p>
+              <p>웹개발의 가장 큰 매력은 무궁무진한 가능성이라고 생각합니다.</p>
+              <br>
+              <p>다양한 사람들이 만족할 수 있는 웹페이지를 개발하고 꾸준히 소통하는 개발자가 되고싶습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION  -->
+    <section id="skills" class="section">
+      <div class="scroll_container">
+        <header class="section__header">
+          <h1 class="section__title">
+            MY SKILLS
+          </h1>
+        </header>
+        
+        <!-- skill-html -->
+        <div class="article__container">
+          <article id="html" class="skills _html">
+            <header class="skills__header">
+              <h1 class="skills__title">
+                HTML
+              </h1>
+            </header>
+            <div>
+              <figure class="skills__thumb">
+                <img class="skills__logo" src="./images/logo-html.svg" alt="HTML 로고">
+              </figure>
+            </div>
+            <div class="skills__content">
+              <p class="skills__desc">
+                <strong>웹표준</strong>과 <strong>웹접근성</strong>에 대해 이해하였고, 누구나 쉽게 접근하고 상호작용할 수 있는 마크업 언어를 학습하였습니다. 
+              </p>
+            </div>
+          </article>
+          <!-- skill-css -->
+          <article id="css" class="skills _css">
+              <header class="skills__header">
+                <h1 class="skills__title">
+                  CSS
+                </h1>
+              </header>
+              <div>
+                <figure class="skills__thumb">
+                  <img class="skills__logo" src="./images/logo-css.svg" alt="CSS 로고">
+                </figure>
+              </div>
+              <div class="skills__content">
+                <p class="skills__desc">
+                  <strong>사용자 친화적인</strong> UI를 제공하기 위해 요소의 속성과 속성값, 작동원리를 이해하였고, 실제로 구현하도록 노력하였습니다.
+                </p>
+              </div>
+          </article>
+          <!-- skill-js -->
+          <article id="javascript" class="skills _javascript">
+            <header class="skills__header">
+              <h1 class="skills__title">
+                JAVASCRIPT
+              </h1>
+            </header>
+            <div>
+              <figure class="skills__thumb">
+                <img class="skills__logo" src="./images/logo-js.svg" alt="JAVASCRIPT 로고">
+              </figure>
+            </div>
+            <div class="skills__content">
+              <p class="skills__desc">
+                <strong>렉시컬 스코프</strong>와 <strong>이벤트루프</strong>, <strong>실행 컨텍스트</strong>를 비롯한 자바스크립트 기본 문법을 학습하였습니다.
+              </p>
+            </div>
+          </article>
+          <!-- skill-react -->
+          <article id="react" class="skills _react">
+            <header class="skills__header">
+              <h1 class="skills__title">
+                REACT
+              </h1>
+            </header>
+            <div>
+              <figure class="skills__thumb">
+                <img class="skills__logo" src="./images/logo-React.svg" alt="REACT 로고">
+              </figure>
+            </div>
+            <div class="skills__content">
+              <p class="skills__desc">
+                리액트 <strong>불변성</strong>과 컴포넌트의 재사용성을 이해하고, <strong>렌더링이 최적화</strong>된 웹앱을 구현하도록 노력하였습니다.
+              </p>
+            </div>
+          </article>
+          <!-- skill-tailwind -->
+          <article id="tailwind" class="skills _react">
+            <header class="skills__header">
+              <h1 class="skills__title">
+                TAILWIND
+              </h1>
+            </header>
+            <div>
+              <figure class="skills__thumb">
+                <img class="skills__logo" src="./images/logo-tailwind.svg" alt="TAILWIND 로고">
+              </figure>
+            </div>
+            <div class="skills__content">
+              <p class="skills__desc">
+                <strong>직관적</strong>이고 자유도가 높으며, <strong>빠른 스타일링</strong>이 가능한 CSS 프레임워크를 학습하였습니다.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT SECTION  -->
+    <section id="project" class="section">
+      <div class="scroll_container">
+        <header class="section__header">
+          <h1 class="section__title">
+            MY PROJECT
+          </h1>
+        </header>
+  
+        <div class="project">
+          <!-- to do list -->
+          <div class="project__card">
+            <a class="project__link" href="https://yjtodolist.netlify.app/" target="_blank" >
+              <span class="project__moveT">이미지 클릭 시 이동</span>
+              <img class="project__img" src="./images/todolist_image.png" alt="To Do List 이미지 예시">
+            </a>
+            <h2 class="project__title">
+              To Do List
+            </h2>
+            <p>사용 기술 : React, nodejs, Tailwind</p>
+            <p class="project__text">
+              리액트와 친해지기 위해 To Do List 웹앱을 구현해보았습니다. <br>
+              리액트 환경에서 컴포넌트가 렌더링될때 화면전환이 부드럽게 되도록 구현하는 방법을 연습하였습니다. <br>
+              프로젝트를 진행하면서 컴포넌트간 props의 흐름 그리고 가상 DOM 조작법에 대해 이해할 수 있었습니다.
+            </p>
+          </div>
+          <!-- insta clone -->
+          <div class="project__card">            
+            <img class="project__img" src="./images/test.jpg" alt="">            
+            <h2 class="project__title">
+              Instagram Clone
+            </h2>
+            <p class="project__text">
+              프로젝트 <br>
+              진행중 ..
+            </p>
+          </div>
+          <!-- <div class="project__card">
+            <img class="project__img" src="./images/test.jpg" alt="">
+            <h2 class="project__title">
+              프로젝트 이름
+            </h2>
+            <p class="project__text">
+              프로젝트 설명 <br>
+              프로젝트 설명
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="scroll_container">
+        <header class="section__header">
+          <h1 class="section__title">
+            CONTACT ME
+          </h1>
+        </header>
+        <div class="contact">
+          <div class="contact__tab">
+            <input name="contact" type="radio" id="ct_1" checked>
+            <label for="ct_1" class="sr-only">연락처</label>
+            <input name="contact" type="radio" id="ct_2">
+            <label for="ct_2" class="sr-only">기록</label>
+            <div class="contact__slides">
+              <div class="contact__slide-con">
+                <div class="contact__slide">
+                  <address>
+                    <table class="contact__contacts">
+                      <caption class="sr-only">연락처 목록</caption>
+                      <tr>
+                        <th>PHONE</th>
+                        <td>
+                          <a href="tel:010-9913-0451">
+                            010-9913-0451
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>E-MAIL</th>
+                        <td>
+                          <a href="mailto:yo_onzy@naver.com">
+                            yo_onzy@naver.com
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </address>
+                </div>
+                <div class="contact__slide">
+                  <address>
+                    <table class="contact__contacts">
+                      <caption class="sr-only">기록 목록</caption>
+                      <tr>
+                        <th>GITHUB</th>
+                        <td>
+                          <a href="https://github.com/summer-S2" target="_blank" alt="새 창에서 열기" >
+                            https://github.com/summer-S2
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>VELOG</th>
+                        <td>
+                          <a href="https://velog.io/@yo_onzy" target="_blank" alt="새 창에서 열기">
+                            https://velog.io/@yo_onzy
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+  </main>
+
+
+
+  <!-- *** FOOTER *** -->
+  <footer>
+    <h1 class="sr-only">Copyright</h1>
+    <p>
+      ⓒ 2023. JeongYunji - All rights reserved
+    </p>
+  </footer>
+  
+  <script src="./app.js"></script>
+</body>
+</html>

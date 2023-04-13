@@ -19,7 +19,7 @@
 
 /* 타이핑 텍스트 */
 .intro__type {
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   display: flex;
   flex-direction: column;
   gap: 0.32em;

@@ -35,6 +35,7 @@
   height: 10%;
   background-color: black;
   border-radius: 50%;
+  transform: translate(0, 10px);
 }
 
 .skills__thumb {

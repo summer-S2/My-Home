@@ -45,13 +45,15 @@
   font-size: var(--font-size-text);
 }
 
-/* .project__link {
+.project__link {
+  display: inline-block;
   position: relative;
-} */
+}
+
 .project__moveT {
   position: absolute;
-  top: 3;
-  right: 3;
+  top: 5px;
+  right: 10px;
 }
 
 /* 모바일 */

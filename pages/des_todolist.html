@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JYJ Home - To Do List Description</title>
+
+    <script src="../app.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- 스크롤 top 버튼 -->
+    <button id="movetopbt" class="display-hidden" onclick="topFunction()">
+      <span class="sr-only">맨 위로 이동하기</span>
+      <svg
+        fill="white"
+        width="25"
+        height="25"
+        xmlns="http://www.w3.org/2000/svg"
+        id="Layer_1"
+        data-name="Layer 1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M18,20c-.384,0-.768-.146-1.061-.439l-4.938-4.939-4.94,4.939c-.586,.586-1.535,.586-2.121,0s-.586-1.536,0-2.121l6.001-6c.281-.281,.663-.439,1.061-.439h0c.397,0,.779,.158,1.061,.439l5.999,6c.586,.586,.586,1.536,0,2.121-.293,.293-.677,.439-1.061,.439Zm1.067-7.708c.582-.589,.576-1.539-.014-2.121l-3.922-3.873c-.837-.837-1.948-1.298-3.132-1.298s-2.295,.461-3.124,1.291l-3.93,3.88c-.59,.582-.596,1.532-.014,2.121,.581,.59,1.533,.595,2.121,.014l3.938-3.887c.537-.539,1.473-.546,2.025,.007l3.93,3.88c.292,.289,.673,.433,1.054,.433,.387,0,.774-.149,1.067-.446Z"
+        />
+      </svg>
+    </button>
+
+    <!-- *** HEADER *** -->
+    <header class="header">
+      <!-- 홈 버튼  -->
+      <h1>
+        <span class="sr-only">홈으로 이동 버튼</span>
+        <a class="header__homelink" href="../index.html">
+          <div class="header__homesvg">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Outline"
+              viewBox="0 0 24 24"
+              width="35"
+              height="35"
+              fill="white"
+            >
+              <path
+                d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"
+              />
+            </svg>
+          </div>
+        </a>
+      </h1>
+
+      <!-- 모바일용 메뉴 버튼 -->
+      <button class="header__menu-btn">
+        <!-- <?xml version="1.0" encoding="utf-8"?> -->
+        <svg
+          id="menu_svg"
+          fill="#FFFFFF"
+          width="60px"
+          height="60px"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          viewBox="0 0 48 48"
+          style="enable-background: new 0 0 48 48"
+          xml:space="preserve"
+        >
+          <path d="M6,36v-3h36v3H6z M6,25.5v-3h36v3H6z M6,15v-3h36v3H6z" />
+        </svg>
+      </button>
+
+      <!-- 헤더 내비 -->
+      <nav class="header__nav hidden">
+        <ul>
+          <li class="header__nav-item">
+            <a href="../index.html#about">ABOUT ME</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#skills">SKILLS</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#project">PROJECT</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="des__main">
+      <!-- 프로젝트 이미지와 타이틀 -->
+      <section id="image">
+        <div class="scroll_container">
+          <h1 class="des__member">1인 프로젝트</h1>
+          <h1 class="des__title">오늘 목표 100% 달성하기 - To Do List</h1>
+          <img src="../images/todolist-미리보기.PNG" alt="to-do-list" />
+        </div>
+      </section>
+
+      <!-- 프로젝트 사용 기술과 내용 -->
+      <section id="skills">
+        <div class="scroll_container">
+          <h1 class="des__title">사용된 기술들</h1>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                리액트와 함께하는 첫 프로젝트로 useState를 이용하여 초기
+                데이터의 CRUD를 다루어 보았습니다. 배열 상태의 데이터를 리액트
+                불변성을 유지하면서 id 값을 확인하여 필요한 데이터만을 관리하는
+                방법에 대하여 연습할 수 있었습니다. 또한, Filter 객체를 만들어
+                사용자가 선택한 Filter의 값에 맞는 데이터만을 화면에 구성하고,
+                데이터의 수정 모드를 확인하여 모드에 따라 다른 컴포넌트를 마운트
+                할 수 있도록 구성해 보았습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              Tailwind
+            </button>
+            <div class="button__item max-h-0">
+              <p class="">
+                하나의 js 파일에서 컴포넌트와 스타일을 모두 다룰 수 있는
+                tailwind css를 리액트에 적용시켜 사용하였습니다. 스타일을
+                적용/수정할 때 파일을 왔다 갔다 반복할 필요가 없어 간편했습니다.
+                [] 안에 임의의 값을 넣어 tailwind가 제공하지 않는 속성을
+                생성하여 적용해 보았습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 프로젝트 어플리케이션 기능 설명 -->
+      <section id="function">
+        <div class="scroll_container">
+          <h1 class="des__title">적용된 기능들</h1>
+          <ul class="function__container">
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>화면 상단에서 윈도우 설정값에 따른 날짜 확인이 가능합니다.</p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                목표 달성 여부를 토글 하면 달성률을 계산하여 애니메이션과 함께
+                값이 변경됩니다. 목표 label이나 checkbox를 클릭하면 토글 됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                입력창에 데이터를 입력하면 새로운 목표가 목록 가장 하단에
+                나타납니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                전체 & 진행 중 & 완료 버튼을 클릭하면 현재 목록의 목표 중 버튼의
+                값에 해당되는 데이터만 필터링하여 보여줍니다. 기존의 목표가 수정
+                중일 때는 동작하지 않습니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                목표의 화살표 버튼을 클릭하면 내용 수정이 가능하고 이전 목표를
+                placeholder에 띄워줍니다. 수정 모드에서는 이전으로 돌아가기
+                버튼과 확인 버튼이 있고, 값을 수정하지 않으면 확인 버튼은
+                비활성화됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                휴지통 버튼을 클릭하면 오른쪽에서 왼쪽으로 element가 사라지며
+                데이터를 삭제합니다. 완료된 목표를 삭제하는 경우 달성률도
+                변경됩니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- 바로가기 버튼 -->
+    <div class="link__container">
+      <a
+        class="des__link"
+        href="https://yjtodolist.netlify.app/"
+        target="_blank"
+      >
+        <div class="link__text">To Do List 바로가기</div>
+        <div>
+          <svg
+            fill="white"
+            id="Bold"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path
+              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+            />
+          </svg>
+        </div>
+      </a>
+      <a class="des__link" href="./des_yuntube.html">
+        <div class="link__text">
+          <p>다음 프로젝트 보러가기</p>
+          <p>YunTube</p>
+        </div>
+        <div>
+          <svg
+            fill="white"
+            id="Bold"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path
+              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- *** FOOTER *** -->
+    <footer>
+      <h1 class="sr-only">Copyright</h1>
+      <p>ⓒ 2023. JeongYunji - All rights reserved</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+body {
+  background-color: var(--color-light-bg);
+}
+
+.des__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+.des__main section {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.des__member {
+  padding: 1rem;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 섹션 타이틀 */
+.des__title {
+  padding: 1rem;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#image img {
+  width: 100%;
+}
+
+/* ---------기술들 아코디언 버튼---------- */
+/* 버튼 */
+.skills__button {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  background-color: #9ac3bc;
+  color: #eee;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+.skills__button:hover {
+  background-color: #9ac3bcab;
+}
+
+/* 버튼 끝 화살표 */
+.skills__button::after {
+  float: right;
+  content: ">";
+  right: 10px;
+  transition: 0.5s;
+  transform: rotate(90deg);
+}
+
+/* active되면 180도 회전 */
+.skills__button.active::after {
+  /*button태그 중 active클래스가 있는 element의 after만*/
+  transform: rotate(270deg);
+}
+
+.button__item {
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.button__item p {
+  font-size: large;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* 내용 숨기기 */
+.max-h-0 {
+  max-height: 0;
+}
+/* 내용 보여주기 */
+.max-h-40 {
+  max-height: 50rem;
+}
+
+/* 기능 소개 */
+.function__container {
+  padding: 1rem;
+}
+
+/* 기능들 내용 */
+.function__content {
+  padding: 1rem;
+  font-size: large;
+  line-height: 22px;
+  border-bottom: 4px dashed #fff;
+}
+
+.function__content img {
+  margin-right: 5px;
+  float: left;
+}
+
+.link__container {
+  width: 100%;
+}
+.des__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  padding: 2rem;
+  background-color: var(--color-main);
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* 프로젝트 이동 버튼 텍스트 */
+.link__text {
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.des__link:hover {
+  background: #fff;
+  color: var(--color-main);
+}
+
+.des__link:hover svg {
+  fill: var(--color-main);
+}

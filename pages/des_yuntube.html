@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JYJ Home - Yuntube Description</title>
+
+    <script src="../app.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- 스크롤 top 버튼 -->
+    <button id="movetopbt" class="display-hidden" onclick="topFunction()">
+      <span class="sr-only">맨 위로 이동하기</span>
+      <svg
+        fill="white"
+        width="25"
+        height="25"
+        xmlns="http://www.w3.org/2000/svg"
+        id="Layer_1"
+        data-name="Layer 1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M18,20c-.384,0-.768-.146-1.061-.439l-4.938-4.939-4.94,4.939c-.586,.586-1.535,.586-2.121,0s-.586-1.536,0-2.121l6.001-6c.281-.281,.663-.439,1.061-.439h0c.397,0,.779,.158,1.061,.439l5.999,6c.586,.586,.586,1.536,0,2.121-.293,.293-.677,.439-1.061,.439Zm1.067-7.708c.582-.589,.576-1.539-.014-2.121l-3.922-3.873c-.837-.837-1.948-1.298-3.132-1.298s-2.295,.461-3.124,1.291l-3.93,3.88c-.59,.582-.596,1.532-.014,2.121,.581,.59,1.533,.595,2.121,.014l3.938-3.887c.537-.539,1.473-.546,2.025,.007l3.93,3.88c.292,.289,.673,.433,1.054,.433,.387,0,.774-.149,1.067-.446Z"
+        />
+      </svg>
+    </button>
+
+    <!-- *** HEADER *** -->
+    <header class="header">
+      <!-- 홈 버튼  -->
+      <h1>
+        <span class="sr-only">홈으로 이동 버튼</span>
+        <a class="header__homelink" href="../index.html">
+          <div class="header__homesvg">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Outline"
+              viewBox="0 0 24 24"
+              width="35"
+              height="35"
+              fill="white"
+            >
+              <path
+                d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"
+              />
+            </svg>
+          </div>
+        </a>
+      </h1>
+
+      <!-- 모바일용 메뉴 버튼 -->
+      <button class="header__menu-btn">
+        <!-- <?xml version="1.0" encoding="utf-8"?> -->
+        <svg
+          id="menu_svg"
+          fill="#FFFFFF"
+          width="60px"
+          height="60px"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          viewBox="0 0 48 48"
+          style="enable-background: new 0 0 48 48"
+          xml:space="preserve"
+        >
+          <path d="M6,36v-3h36v3H6z M6,25.5v-3h36v3H6z M6,15v-3h36v3H6z" />
+        </svg>
+      </button>
+
+      <!-- 헤더 내비 -->
+      <nav class="header__nav hidden">
+        <ul>
+          <li class="header__nav-item">
+            <a href="../index.html#about">ABOUT ME</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#skills">SKILLS</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#project">PROJECT</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="des__main">
+      <!-- 프로젝트 이미지와 타이틀 -->
+      <section id="image">
+        <div class="scroll_container">
+          <h1 class="des__member">1인 프로젝트</h1>
+          <h1 class="des__title">Youtube clone app - Yuntube</h1>
+          <img src="../images/yuntube-미리보기.PNG" alt="yuntube" />
+        </div>
+      </section>
+
+      <!-- 프로젝트 사용 기술과 내용 -->
+      <section id="skills">
+        <div class="scroll_container">
+          <h1 class="des__title">사용된 기술들</h1>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              YouTube API
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                YouTube API를 사용하여 YouTube와 상호작용하는 YouTube Clone
+                App을 구현하였습니다. API Explorer를 사용하여 실시간 데이터에서
+                메서드를 호출하고 API를 요청하여 응답받은 JSON 데이터를 활용해
+                보는 연습을 할 수 있었습니다. YouTube Data API가 제공하는 하루
+                할당량을 효율적으로 관리하기 위해 Postman으로 받아온 JSON 파일을
+                저장하여 mock 데이터로 활용하였고, 실제 네트워크 통신과 mock
+                데이터 사용을 편하게 구분할 수 있도록 apiClient를 나누어
+                사용하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                프로젝트를 진행하면서 네트워크 통신을 하여 전달받은 데이터를
+                관리하고 화면에 구성하는 방법을 연습하였습니다. axios
+                라이브러리를 적용시켜 응답받은 JSON 데이터를 useContext로
+                관리하고, 모든 자식 컴포넌트에서 사용할 수 있도록
+                구현하였습니다. 또한 컴포넌트와 로직을 분리하여 컴포넌트에서는
+                UI에만 집중할 수 있고 로직은 api 폴더 내에서만 관리할 수 있도록
+                구현하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React-Router
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                React-Router 라이브러리를 프로젝트에 적용하여 클라이언트 사이드
+                라우팅이 가능하도록 구현하였습니다. 기본 경로에 중첩 경로를
+                구성하여 고정되는 컴포넌트와 URL에 따라 변경되는 컴포넌트인
+                Outlet을 설정하였습니다. 또한, 자식 경로에 Dynamic Segments
+                적용시켜 useParams()을 통해 데이터를 가져오는 동적 라우팅이
+                가능하도록 세분화하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React-Query
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                useContext를 사용하여 데이터를 요청할 때, useQuery 라이브러리를
+                적용시켜 불필요한 네트워크 통신을 방지할 수 있도록 구현하는
+                연습을 하였습니다. 요청받은 데이터를 1분만 캐싱 하여 신선한
+                데이터가 유지될 수 있도록 구현하였습니다. 또한 쿼리 키 배열에
+                키워드, id와 같은 변수를 할당하여 항목별로 데이터를 식별할 수
+                있도록 세분화하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              Tailwind
+            </button>
+            <div class="button__item max-h-0">
+              <p class="">
+                컴포넌트와 로직을 분리하였기 때문에 직관적으로 컴포넌트의
+                스타일을 관리할 수 있는 Tailwind 라이브러리를 사용하였습니다.
+                className 속성에 JSX 문법을 활용하여 상태에 따라 다른 스타일이
+                적용되도록 구현하였고, tailwind.config 파일을 활용해 확장된
+                프로젝트만의 스타일을 적용시켜 보았습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 프로젝트 어플리케이션 기능 설명 -->
+      <section id="function">
+        <div class="scroll_container">
+          <h1 class="des__title">적용된 기능들</h1>
+          <ul class="function__container">
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>화면 왼쪽 상단에 로고를 클릭하면 홈 화면 경로로 이동합니다.</p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                검색 바와 로고가 담긴 헤더는 화면에 고정하였고 검색 입력창에
+                키워드를 입력하면 키워드 검색이 가능합니다. 다른 페이지에서 뒤로
+                가기 버튼을 사용해 검색 페이지로 되돌아가는 경우 검색했던
+                키워드가 검색 입력창에 남아있습니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                동영상 카드를 클릭하면 상세 페이지로 이동합니다. 상세
+                페이지에서는 클릭한 동영상과 관련된 동영상이 화면에 추천됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                반응형 웹 디자인을 적용해 디바이스 크기에 따라 UI가 변경됩니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- 바로가기 버튼 -->
+    <div class="link__container">
+      <a class="des__link" href="https://yuntube.netlify.app/" target="_blank">
+        <div class="link__text">Yuntube 바로가기</div>
+        <div>
+          <svg
+            fill="white"
+            id="Bold"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path
+              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+            />
+          </svg>
+        </div>
+      </a>
+      <a class="des__link" href="./des_forest-of-furniture.html">
+        <div class="link__text">
+          <p>다음 프로젝트 보러가기</p>
+          <p>Forest Of Furniture</p>
+        </div>
+        <div>
+          <svg
+            fill="white"
+            id="Bold"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path
+              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- *** FOOTER *** -->
+    <footer>
+      <h1 class="sr-only">Copyright</h1>
+      <p>ⓒ 2023. JeongYunji - All rights reserved</p>
+    </footer>
+  </body>
+</html>

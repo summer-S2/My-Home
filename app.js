@@ -3,55 +3,58 @@
 //   background-color: var(--color-dark);
 // }
 
-const body = document.querySelector('body');
-const header__menu_btn = document.querySelector('.header__menu-btn');
-const header__nav = document.querySelector('.header__nav');
-const menu_svg = document.querySelector('#menu_svg');
-const movetopbt = document.querySelector('#movetopbt');
+const body = document.querySelector("body");
+const header__menu_btn = document.querySelector(".header__menu-btn");
+const header__nav = document.querySelector(".header__nav");
+const menu_svg = document.querySelector("#menu_svg");
+const movetopbt = document.querySelector("#movetopbt");
 
 // console.log(document.documentElement.scrollTop);
 // console.log(document.querySelector('html').scrollTop);
 
-
 // 모바일용 헤더 내비 메뉴버튼 SVG 색상 토글하는 함수
 function change_color_menu() {
-  if(menu_svg.style.fill === "rgb(58, 152, 185)") {
+  if (menu_svg.style.fill === "rgb(58, 152, 185)") {
     menu_svg.style.fill = "#FFF";
   } else {
-    menu_svg.style.fill = '#3A98B9';
+    menu_svg.style.fill = "#3A98B9";
   }
 }
 
 // 헤더 메뉴버튼 스타일 토글
-header__menu_btn.addEventListener('click' , (event) => {
-  header__nav.classList.toggle('hidden');
-  header__menu_btn.classList.toggle('bg-change');
-  
-  change_color_menu()
+header__menu_btn.addEventListener("click", (event) => {
+  header__nav.classList.toggle("hidden");
+  header__menu_btn.classList.toggle("bg-change");
 
-})
+  change_color_menu();
+});
 
 // 내비 요소 클릭하면 지우기
-header__nav.addEventListener('click' , (event) => {
-  header__nav.classList.add('hidden');
-  header__menu_btn.classList.remove('bg-change');
+header__nav.addEventListener("click", (event) => {
+  header__nav.classList.add("hidden");
+  header__menu_btn.classList.remove("bg-change");
 
-  change_color_menu()
-})
+  change_color_menu();
+});
 
 // 스크롤 내리면 top버튼 띄우기
-window.onscroll = function() { scrollFunction() };
+window.onscroll = function () {
+  scrollFunction();
+};
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    movetopbt.classList.remove('display-hidden');
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    movetopbt.classList.remove("display-hidden");
   } else {
-    movetopbt.classList.add('display-hidden');
+    movetopbt.classList.add("display-hidden");
   }
 }
 
 // top버튼 클릭하면 맨 위로 이동
 function topFunction() {
-  window.scrollTo({top:0, left:0, behavior:'smooth'})
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
 
 // window.addEventListener("scroll", (event) => {
@@ -82,13 +85,13 @@ function topFunction() {
 // 콜백함수가 호출되는 IntersectionObserver의 참조객체
 const options = {
   root: null, // viewport
-  rootMargin: '0px',
-  threshold: .1, // 30%가 viewport에 들어와 있어야 callback 실행
-}
+  rootMargin: "0px",
+  threshold: 0.1, // 30%가 viewport에 들어와 있어야 callback 실행
+};
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
   // 관찰 중인 배열 형식의 객체 리스트
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     console.log(entry.isIntersecting);
     if (entry.isIntersecting) {
       entry.target.classList.add("active");
@@ -98,6 +101,15 @@ const observer = new IntersectionObserver(entries => {
   });
 }, options);
 
-const scrollList = document.querySelectorAll('.scroll_container');
+const scrollList = document.querySelectorAll(".scroll_container");
 
-scrollList.forEach(el => observer.observe(el));
+scrollList.forEach((el) => observer.observe(el));
+
+// 프로젝트 상세페이지 스킬 토글 버튼
+function skillToggle(el) {
+  const item = el.nextElementSibling; // 클릭한 버튼 아래 엘리먼트
+
+  item.classList.toggle("max-h-0");
+  item.classList.toggle("max-h-40");
+  el.classList.toggle("active");
+}

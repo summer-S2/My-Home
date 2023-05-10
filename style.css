@@ -1,18 +1,20 @@
-@import url('./styles/intro.css');
-@import url('./styles/header.css');
-@import url('./styles/about.css');
-@import url('./styles/main.css');
-@import url('./styles/project.css');
-@import url('./styles/skills.css');
-@import url('./styles/contact.css');
-@import url('./styles/footer.css');
+@import url("./styles/intro.css");
+@import url("./styles/header.css");
+@import url("./styles/about.css");
+@import url("./styles/main.css");
+@import url("./styles/project.css");
+@import url("./styles/skills.css");
+@import url("./styles/contact.css");
+@import url("./styles/footer.css");
+@import url("./styles/description.css");
 
-*{box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .display-hidden {
   display: none;
 }
-
 
 /* 폰트 */
 @font-face {
@@ -27,20 +29,20 @@
   font-family: "HakgyoansimWoojuR";
   src: url("./fonts/HakgyoansimWoojuR.ttf");
 }
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
 
 /* ===== 변수 구간 ===== */
 :root {
-  --color-main: #3A98B9;
-  --color-sub: #00A200;
-  --color-dark: #2F4858;
-  --color-emph: #F10F5F;
+  --color-main: #3a98b9;
+  --color-sub: #00a200;
+  --color-dark: #2f4858;
+  --color-emph: #f10f5f;
   --color-text: #281812;
-  --color-lighter-sd: #E8D5C4;
-  --color-light-bd: #E8D5C4;
-  --color-light-bg: #FFF1DC;
+  --color-lighter-sd: #e8d5c4;
+  --color-light-bd: #e8d5c4;
+  --color-light-bg: #fff1dc;
 
-  --font-code: 'Nanum Gothic Coding', monospace;;
+  --font-code: "Nanum Gothic Coding", monospace;
 
   --font-size-title: 44px;
   --font-size-subtitle: 32px;
@@ -55,13 +57,18 @@
 
 body {
   margin: 0;
-  font-family: 'HakgyoansimBunpilR', sans-serif;
+  font-family: "HakgyoansimBunpilR", sans-serif;
 
   /* 개발용 설정 */
-  min-height: 300vh;
+  /* min-height: 300vh; */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: normal;
   margin: 0;
@@ -71,51 +78,68 @@ p {
   margin: 0;
 }
 
-strong, em {
+strong,
+em {
   font-weight: inherit;
   font-style: normal;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-dl { margin: 0; }
+dl {
+  margin: 0;
+}
 dd {
   margin: 0;
   display: inline;
 }
 
-figure { margin: 0; }
+figure {
+  margin: 0;
+}
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-th { font-weight: normal; }
+th {
+  font-weight: normal;
+}
 
-address { font-style: inherit; }
+address {
+  font-style: inherit;
+}
 
+button {
+  font-family: inherit;
+}
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* 텍스트 올라오는 애니메이션 */
 @keyframes text-up {
-  from { translate: 0 100%; } 
-  to { translate: 0 0; } 
+  from {
+    translate: 0 100%;
+  }
+  to {
+    translate: 0 0;
+  }
 }
 
 /* 스크롤 스타일 */

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JYJ Home - Forest Of Furniture Description</title>
+
+    <script src="../app.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- 스크롤 top 버튼 -->
+    <button id="movetopbt" class="display-hidden" onclick="topFunction()">
+      <span class="sr-only">맨 위로 이동하기</span>
+      <svg
+        fill="white"
+        width="25"
+        height="25"
+        xmlns="http://www.w3.org/2000/svg"
+        id="Layer_1"
+        data-name="Layer 1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M18,20c-.384,0-.768-.146-1.061-.439l-4.938-4.939-4.94,4.939c-.586,.586-1.535,.586-2.121,0s-.586-1.536,0-2.121l6.001-6c.281-.281,.663-.439,1.061-.439h0c.397,0,.779,.158,1.061,.439l5.999,6c.586,.586,.586,1.536,0,2.121-.293,.293-.677,.439-1.061,.439Zm1.067-7.708c.582-.589,.576-1.539-.014-2.121l-3.922-3.873c-.837-.837-1.948-1.298-3.132-1.298s-2.295,.461-3.124,1.291l-3.93,3.88c-.59,.582-.596,1.532-.014,2.121,.581,.59,1.533,.595,2.121,.014l3.938-3.887c.537-.539,1.473-.546,2.025,.007l3.93,3.88c.292,.289,.673,.433,1.054,.433,.387,0,.774-.149,1.067-.446Z"
+        />
+      </svg>
+    </button>
+
+    <!-- *** HEADER *** -->
+    <header class="header">
+      <!-- 홈 버튼  -->
+      <h1>
+        <span class="sr-only">홈으로 이동 버튼</span>
+        <a class="header__homelink" href="../index.html">
+          <div class="header__homesvg">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Outline"
+              viewBox="0 0 24 24"
+              width="35"
+              height="35"
+              fill="white"
+            >
+              <path
+                d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"
+              />
+            </svg>
+          </div>
+        </a>
+      </h1>
+
+      <!-- 모바일용 메뉴 버튼 -->
+      <button class="header__menu-btn">
+        <!-- <?xml version="1.0" encoding="utf-8"?> -->
+        <svg
+          id="menu_svg"
+          fill="#FFFFFF"
+          width="60px"
+          height="60px"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          viewBox="0 0 48 48"
+          style="enable-background: new 0 0 48 48"
+          xml:space="preserve"
+        >
+          <path d="M6,36v-3h36v3H6z M6,25.5v-3h36v3H6z M6,15v-3h36v3H6z" />
+        </svg>
+      </button>
+
+      <!-- 헤더 내비 -->
+      <nav class="header__nav hidden">
+        <ul>
+          <li class="header__nav-item">
+            <a href="../index.html#about">ABOUT ME</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#skills">SKILLS</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#project">PROJECT</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../index.html#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="des__main">
+      <!-- 프로젝트 이미지와 타이틀 -->
+      <section id="image">
+        <div class="scroll_container">
+          <h1 class="des__member">1인 프로젝트</h1>
+          <h1 class="des__title">가구 판매 사이트 - Forest Of Furniture</h1>
+          <img
+            src="../images/forest-of-furniture-미리보기.PNG"
+            alt="forest-of-furniture"
+          />
+        </div>
+      </section>
+
+      <!-- 프로젝트 사용 기술과 내용 -->
+      <section id="skills">
+        <div class="scroll_container">
+          <h1 class="des__title">사용된 기술들</h1>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              Firebase
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                Firebase의 Authentication과 Realtime Database이 적용된
+                웹사이트를 제작해 보았습니다. Firebase 인증을 사용하여 사용자가
+                구글로 로그인하거나 서버에 등록된 이메일과 비밀번호를 입력하여
+                사이트에 로그인할 수 있습니다. onAuthStateChanged 메서드를
+                사용해 변경된 인증을 관리하고, 로그인 사용자가 사이트를 다시
+                방문했을 때 세션에 저장된 인증을 가져오도록 구현하였습니다.
+                또한, 관리자 유저를 서버에 등록하여 admin 사용자를 구분할 수
+                있도록 구현하였습니다. 실시간 데이터베이스에서는 admin 사용자의
+                uid, 유저별 장바구니, 관리자가 등록한 상품 데이터를 실시간으로
+                공유하고 업데이트하여 수신하도록 동기화하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              Cloudinary
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                Cloudinary를 사용하여 관리자 유저가 등록한 이미지를 손쉽게
+                업로드하고 url을 전달받아 데이터 베이스에 전달할 수 있도록
+                구현하는 연습을 하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                페이지와 컴포넌트, UI 컴포넌트를 분리하고, 컴포넌트와 로직을
+                분리하여 관리할 수 있도록 구현하였습니다. useContext로 최상위
+                컴포넌트에서 인증을 관리하고, firebase 인증, 실시간 데이터 관련
+                api와 cloudinary에 이미지 url을 받아오는 api를 나누어 목적별로
+                로직을 관리하기 쉽도록 구현해 보았습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React-Query
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                useQuery 라이브러리를 사용하여 불필요한 네트워크 통신을
+                방지하였습니다. staleTime을 1분으로 적용하여 1분간만 캐시 되도록
+                설정하였습니다. 캐시 된 경우 변경된 데이터를 적용시키기 위해서
+                useMutation를 설정하고 onSuccess인 경우 invalidateQueries가
+                적용될 수 있도록 로직을 구현하였습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              React-Router
+            </button>
+            <div class="button__item max-h-0">
+              <p>
+                React-Router 라이브러리를 사용하여 기본 경로와 하위 경로들을
+                설정하였습니다. ProtectedRoute 컴포넌트를 생성하여 페이지
+                컴포넌트를 감싸고, ProtectedRoute에서 로그인 유무와 관리자
+                유저를 확인하여 인증이 되지 않은 유저는 최상위 경로로 이동시키는
+                경로 보호를 적용시켰습니다.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button class="skills__button" onclick="skillToggle(this)">
+              Tailwind
+            </button>
+            <div class="button__item max-h-0">
+              <p class="">
+                별도의 CSS 파일 없이 컴포넌트에서 스타일링이 가능한 Tailwind
+                라이브러리를 사용하였습니다. config 파일의 extend 속성을 적극
+                활용하여 필요한 스타일을 정의하여 적용시켜보았습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 프로젝트 어플리케이션 기능 설명 -->
+      <section id="function">
+        <div class="scroll_container">
+          <h1 class="des__title">적용된 기능들</h1>
+          <ul class="function__container">
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                비회원인 경우 헤더에 로그인 버튼이 활성화되고 홈 화면과
+                상세페이지만 접근이 가능합니다. 비회원이 상품 상세페이지에서
+                장바구니에 추가하는 경우 로그인 안내 메시지가 출력됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                로그인 페이지에서 이메일 로그인과 구글 계정 로그인이 가능합니다.
+                비밀번호는 우측 버튼을 토글 하여 확인할 수 있고 로그인에 실패한
+                경우 안내 메시지가 출력됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                일반 회원인 경우 장바구니 기능을 사용할 수 있습니다. 상품
+                상세페이지에서 옵션을 선택하여 상품을 장바구니에 추가할 수
+                있습니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                관리자 유저인 경우 장바구니 기능을 테스트할 수 있고 제품 등록
+                기능을 사용할 수 있습니다. 해당 페이지에 등록한 제품은
+                실시간으로 반영되며, 내용 지우기 버튼을 클릭하면 입력한 내용이
+                모두 삭제됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                장바구니 페이지에서 -, + 버튼을 클릭하여 상품의 개수를 변경할 수
+                있습니다. 상품이 1개인 경우에 - 버튼을 클릭하면 최소 주문
+                수량이라는 안내 문구가 출력됩니다. 모든 제품의 금액과 배송비를
+                합산한 총액이 하단에 계산되어 출력됩니다.
+              </p>
+            </li>
+            <li class="function__content">
+              <img src="../images/checkbox.svg" alt="check" />
+              <p>
+                반응형 웹 디자인을 적용해 디바이스 크기에 따라 UI가 변경됩니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- 바로가기 버튼 -->
+    <div class="link__container">
+      <a
+        class="des__link"
+        href="https://forestoffurniture.netlify.app/"
+        target="_blank"
+      >
+        <div class="link__text">Forest Of Furniture 바로가기</div>
+        <div>
+          <svg
+            fill="white"
+            id="Bold"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path
+              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+            />
+          </svg>
+        </div>
+      </a>
+      <a class="des__link" href="./des_todolist.html">
+        <div class="link__text">
+          <p>다음 프로젝트 보러가기</p>
+          <p>To Do List</p>
+        </div>
+        <div>
+          <svg
+            fill="white"
+            id="Bold"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path
+              d="M19.122,18.394l3.919-3.919a3.585,3.585,0,0,0,0-4.95L19.122,5.606A1.5,1.5,0,0,0,17,7.727l2.78,2.781-18.25.023a1.5,1.5,0,0,0-1.5,1.5v0a1.5,1.5,0,0,0,1.5,1.5l18.231-.023L17,16.273a1.5,1.5,0,0,0,2.121,2.121Z"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- *** FOOTER *** -->
+    <footer>
+      <h1 class="sr-only">Copyright</h1>
+      <p>ⓒ 2023. JeongYunji - All rights reserved</p>
+    </footer>
+  </body>
+</html>

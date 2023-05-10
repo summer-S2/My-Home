@@ -67,7 +67,7 @@
   }
   .bg-change {
     /* background-color: var(--color-light-bg); */
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
   }
 
   /* 모바일 메뉴 팝업 */
@@ -76,7 +76,7 @@
     position: absolute;
     top: var(--height-toolbar);
     right: 0;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
     padding-bottom: 1em;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow-y: hidden;
@@ -91,11 +91,11 @@
     width: 100vw;
   }
   .header__nav-item:not(:last-child) {
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 2px solid #ffffff;
   }
 
   /* 내비 숨기기 */
-  .hidden { 
+  .hidden {
     height: 0;
     padding: 0;
     margin: 0;
@@ -120,7 +120,7 @@
 
   /* 네비게이션 호버시 롤오버 효과 */
   .header__nav-item::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -143,8 +143,12 @@
 
 /* top 버튼 */
 @keyframes topbt_ani {
-  from { transform: translateY(0); }
-  to { transform: translateY(-5px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
 }
 #movetopbt {
   position: fixed;
@@ -155,7 +159,9 @@
   background-color: var(--color-main);
   border-radius: 100%;
   cursor: pointer;
-  box-shadow: 3px 3px 3px #2F4858;
+  box-shadow: 1px 9px 11px -1px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 1px 9px 11px -1px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 1px 9px 11px -1px rgba(0, 0, 0, 0.51);
 }
 
 #movetopbt:hover {

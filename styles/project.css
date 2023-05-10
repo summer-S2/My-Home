@@ -6,8 +6,12 @@
 /* 카드들 레이아웃 */
 .project {
   display: flex;
-  gap: 1.5em;
+  justify-content: center;
+  gap: 0.5em;
   margin-top: 48px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* 카드와 아이콘 */
@@ -20,12 +24,14 @@
 }
 .project__img {
   width: 100%;
-  max-width: 300px;
-  height: 350px;
+  height: 400px;
   border-radius: 20px;
   box-shadow: 8px 9px 11px 2px rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 8px 9px 11px 2px rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 8px 9px 11px 2px rgba(0, 0, 0, 0.19);
+}
+.todolist__link {
+  max-width: 300px;
 }
 
 /* 카드 안의 텍스트 */
@@ -47,6 +53,8 @@
 
 .project__link {
   display: inline-block;
+  width: 100%;
+  /* max-width: 350px; */
   position: relative;
 }
 
@@ -54,29 +62,50 @@
   position: absolute;
   top: 5px;
   right: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.description_link {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 5px;
+  background: #eee;
+  color: #9ac3bc;
+  font-size: large;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.description_link:hover {
+  font-weight: bold;
 }
 
 /* 모바일 */
 @media (max-width: 768px) {
   /* 카드들 레이아웃 */
   .project {
-    flex-direction: column;
     width: 100%;
   }
-
-  /* .project__card {
-    padding: 30px;
-  } */
 }
 
 /* 데스크탑 */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
+  .project {
+    flex-direction: row;
+  }
+
   /* 카드와 아이콘*/
   .project__card {
-    width: 50%;
+    width: 49%;
     /* max-height: 60vw; */
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 350ms;
+  }
+
+  /* 이동 링크 이미지 */
+  .project__link {
+    width: 100%;
   }
 
   /* 영역에 호버시 해당 카드 외 축소 */
@@ -102,5 +131,16 @@
   }
   .project__card:hover .project__icon {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project {
+    flex-direction: row;
+  }
+  .project__card {
+    width: 32%;
+    /* cursor: pointer; */
+    transition: all 350ms;
   }
 }
